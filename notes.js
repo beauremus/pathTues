@@ -93,10 +93,15 @@
             reputation: []
         },
         {
-            name: "Baron's town",
+            name: "Swordfall",
             reputation: [
                 "Hero"
             ]
+        }
+    ],
+    kingdoms: [
+        {
+            name: Ospor
         }
     ],
     ship: {
