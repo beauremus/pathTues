@@ -1,26 +1,41 @@
 {
     game: {
-        advancement: "slow/medium/fast"
+        advancement: "fast"
     },
     party: {
         company: { //optional
-            name: "company name",
-            tagline: "company tagline"
+            name: "Infernal Investigators Inc",
+            tagline: "Our Business is Showing Devils the Business"
         },
         members: [
             {
-                name: "character name",
-                player: "playerName/NPC",
-                status: "active/inactive/deceased"
-            }
+                name: "Thragg",
+                player: "Jack Harrison",
+                status: "deceased"
+            },
+            {
+                name: "Argquen",
+                player: "Patrick",
+                status: "active"
+            },
+            {
+                name: "Dante Dandalo",
+                player: "Kent Smith",
+                status: "active"
+            },
+            {
+                name: "Kamish?",
+                player: "NPC",
+                status: "active"
+            },
         ]
     },
     character: {
-        name: "character name",
-        player: "player name",
+        name: "Angus Thrail",
+        player: "Beau Harrison",
         class: {
-            name: "class name",
-            experience: "number",
+            name: "rogue",
+            experience: 46000,
             specials: [
                 {
                     type: "reference",
@@ -29,7 +44,7 @@
             ]
         },
         race: {
-            name: "race name",
+            name: "human",
             specials: [
                 {
                     type: "reference",
@@ -46,7 +61,7 @@
             cha: "number"
         },
         feats: {
-            max: "number", //calculate?
+            max: 5,
             feat: [
                 "feat name"
             ]
@@ -63,10 +78,10 @@
         },
         property: {
             money: {
-                platinum: "number",
-                gold: "number",
-                silver: "number",
-                copper: "number"
+                platinum: 0,
+                gold: 1500,
+                silver: 0,
+                copper: 0
             },
             weapons: [
                 {
@@ -90,9 +105,9 @@
             ],
             vehicles: [
                 {
-                    name: "unique identifier",
-                    type: "wagon/ship",
-                    location: "reference",
+                    name: "Kyra",
+                    type: "ship",
+                    location: "Chiwakoth",
                     speed: "in squares",
                     size: {
                         actual: { //optional
@@ -120,8 +135,52 @@
     notes: {
         locations: [
             {
-                name: "unique identifier",
-                type: "town/building/room",
+                name: "Owlensfall",
+                type: "town",
+                location: "", //optional
+                size: {
+                    actual: { //optional
+                        length: {
+                            amount: "number",
+                            unit: "unit abbreviation"
+                        },
+                        width: {
+                            amount: "number",
+                            unit: "unit abbreviation"
+                        }
+                    },
+                    grid: {
+                        length: "number of squares",
+                        width: "number of square"
+                    }
+                }
+                reputation: "Mayor"
+            },
+            {
+                name: "Chiwakoth",
+                type: "town",
+                location: "", //optional
+                size: {
+                    actual: { //optional
+                        length: {
+                            amount: "number",
+                            unit: "unit abbreviation"
+                        },
+                        width: {
+                            amount: "number",
+                            unit: "unit abbreviation"
+                        }
+                    },
+                    grid: {
+                        length: "number of squares",
+                        width: "number of square"
+                    }
+                }
+                reputation: ""
+            },
+            {
+                name: "Baron's town",
+                type: "town",
                 location: "reference", //optional
                 size: {
                     actual: { //optional
@@ -139,8 +198,8 @@
                         width: "number of square"
                     }
                 }
-                reputation: "descriptor"
-            }
+                reputation: "Hero"
+            },
         ],
         npcs: [
             {

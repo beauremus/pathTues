@@ -73,7 +73,7 @@
             }
         },
         roles: [
-            "Mayor of Allensfall",
+            "Mayor of Owlensfall",
             "CEO of Infernal Investigators Inc"
         ]
     },
@@ -83,7 +83,7 @@
     },
     towns: [
         {
-            name: "Allensfall",
+            name: "Owlensfall",
             reputation: [
                 "mayor"
             ]
