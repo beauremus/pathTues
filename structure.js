@@ -18,16 +18,59 @@
     character: {
         name: "character name",
         player: "player name",
-        class: {
-            name: "class name",
-            experience: "number",
-            specials: [
-                {
-                    type: "reference",
-                    name: "special name"
+        experience: "number",
+        class: [
+            {
+                name: "class name",
+                level: "number",
+                ranksPerLv: "number",
+                skills: {
+                    max: "number",
+                    skill: [
+                        {
+                            name: "skill name",
+                            class: "boolean",
+                            ranks: "number"
+                        }
+                    ]
+                },
+                specials: [
+                    {
+                        type: "reference",
+                        name: "special name",
+                        level: "number"
+                    }
+                ],
+                bab: [
+                    {
+                        add: [
+                            "number"
+                        ],
+                        level: "number"
+                    }
+                ],
+                saves: {
+                    fort: [
+                        {
+                            add: "number",
+                            level: "number"
+                        }
+                    ],
+                    ref: [
+                        {
+                            add: "number",
+                            level: "number"
+                        }
+                    ],
+                    will: [
+                        {
+                            add: "number",
+                            level: "number"
+                        }
+                    ]
                 }
-            ]
-        },
+            }
+        ],
         race: {
             name: "race name",
             specials: [
@@ -45,22 +88,19 @@
             wis: "number",
             cha: "number"
         },
-        feats: {
-            max: "number", //calculate?
-            feat: [
-                "feat name"
-            ]
+        bab: "number", //calculate
+        saves: {
+            fort: "number", //calculate
+            ref: "number", //calculate
+            will: "number" //calculate
         },
-        skills: {
-            max: "number",
-            skill: [
-                {
-                    name: "skill name",
-                    class: "boolean",
-                    ranks: "number"
-                }
-            ]
-        },
+        feats: [
+            {
+                name: "feat name",
+                level: "level adopted",
+                type: "base/class"
+            }
+        ],
         property: {
             money: {
                 platinum: "number",
@@ -72,6 +112,11 @@
                 {
                     name: "descriptor",
                     type: "s/p/b",
+                    damage: {
+                        dice: "number",
+                        die: "number",
+                        ability: "ability tag"
+                    },
                     crit: {
                         range: "number",
                         multiplier: "number"
@@ -93,22 +138,14 @@
                     name: "unique identifier",
                     type: "wagon/ship",
                     location: "reference",
-                    speed: "in squares",
-                    size: {
-                        actual: { //optional
-                            length: {
-                                amount: "number",
-                                unit: "unit abbreviation"
-                            },
-                            width: {
-                                amount: "number",
-                                unit: "unit abbreviation"
-                            }
-                        },
-                        grid: {
-                            length: "number of squares",
-                            width: "number of square"
-                        }
+                    speed: "in feet",
+                    size: { //in feet
+                        length: "number",
+                        width: "number"
+                    },
+                    capacity: {
+                        personnel: "number",
+                        goods: "in tons"
                     }
                 }
             ],
@@ -124,20 +161,8 @@
                 type: "town/building/room",
                 location: "reference", //optional
                 size: {
-                    actual: { //optional
-                        length: {
-                            amount: "number",
-                            unit: "unit abbreviation"
-                        },
-                        width: {
-                            amount: "number",
-                            unit: "unit abbreviation"
-                        }
-                    },
-                    grid: {
-                        length: "number of squares",
-                        width: "number of square"
-                    }
+                    length: "number",
+                    width: "number"
                 }
                 reputation: "descriptor"
             }
@@ -150,15 +175,21 @@
             }
         ]
     },
-    feats: [
+    feat: [
         {
             name: "feat name",
             description: "text description"
         }
     ],
-    talents: [
+    talent: [
         {
             name: "talent name",
+            description: "text description"
+        }
+    ],
+    classFeature: [
+        {
+            name: "feature name",
             description: "text description"
         }
     ]

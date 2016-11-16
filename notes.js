@@ -1,57 +1,3 @@
-{
-    game: {
-        advancement: "fast"
-    },
-    party: {
-        members: [
-            {
-                name: "Thragg",
-                player: "Jack",
-                status: "deceased"
-            },
-            {
-                name: "Arquen",
-                player: "Patrick",
-                status: "active"
-            },
-            {
-                name: "Dante Dandalo",
-                player: "Kent",
-                status: "active"
-            },
-            {
-                name: "Kamish?"
-            }
-        ]
-    },
-    character: {
-        name: "Angus",
-        class: {
-            name: "rogue",
-            experience: 46000,
-            specials: [
-                "Sneak Attack",
-                "Trapfinding",
-                "Evasion",
-                "Trap Sense",
-                "Uncanny Dodge",
-                "Improved Uncanny Dodge"
-            ]
-        },
-        feats: {
-            max: 5,
-            current: [
-                "Leadership",
-                "Combat Advice"
-            ]
-        },
-        talents: {
-            max: 4,
-            current: [
-                "Finesse Rogue",
-                "Sniper’s Eye"
-            ]
-        },
         leadership: {
             score: 15,
             followers: {
@@ -77,33 +23,6 @@
             "CEO of Infernal Investigators Inc"
         ]
     },
-    company: {
-        name: "Infernal Investigators Inc",
-        tagline: "Our Business is Showing Devils the Business"
-    },
-    towns: [
-        {
-            name: "Owlensfall",
-            reputation: [
-                "mayor"
-            ]
-        },
-        {
-            name: "Chiwakoth",
-            reputation: []
-        },
-        {
-            name: "Swordfall",
-            reputation: [
-                "Hero"
-            ]
-        }
-    ],
-    kingdoms: [
-        {
-            name: Ospor
-        }
-    ],
     ship: {
         name: "Kyra",
         size: {
